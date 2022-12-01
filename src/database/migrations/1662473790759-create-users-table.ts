@@ -6,6 +6,7 @@ export class userCreate1662473790759 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
       `
+            CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
             CREATE TABLE IF NOT EXISTS public."USERS" (
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
                 "created_at" TIMESTAMP NOT NULL DEFAULT now(), 

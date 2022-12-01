@@ -11,6 +11,7 @@
     "docker-compose:api-up:local": "docker-compose --env-file .env.local up -d --no-recreate api",
     "docker-compose:api-stop:local": "docker-compose --env-file .env.local stop api",
     "docker-compose:db-up:local": "docker-compose --env-file .env.local up -d --no-recreate postgres",
+    "docker-compose:db-up:test": "docker-compose --env-file .env.test up -d --no-recreate postgres",
     "docker-compose:db-stop:local": "docker-compose --env-file .env.local stop",
     "docker-compose:down:local": "docker-compose --env-file .env.local down",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
