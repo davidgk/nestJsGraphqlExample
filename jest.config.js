@@ -16,5 +16,6 @@ module.exports = {
     '@app/(.*)': '<rootDir>/src/app/$1',
     '@config/(.*)': '<rootDir>/src/config/$1',
     '@database/(.*)': '<rootDir>/src/database/$1',
+    '@commons/(.*)': '<rootDir>/src/commons/$1',
   },
 };

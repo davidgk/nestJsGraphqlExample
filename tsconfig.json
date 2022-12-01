@@ -13,7 +13,8 @@
     "paths": {
       "@app/*": ["app/*"],
       "@config/*": ["config/*"],
-      "@database/*": ["database/*"]
+      "@database/*": ["database/*"],
+      "@commons/*": ["commons/*"]
     },
     "incremental": true,
     "skipLibCheck": true,
