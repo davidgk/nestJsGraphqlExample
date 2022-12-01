@@ -9,8 +9,11 @@ import { getRandomUuid } from '@user/models/testCommons/commons-helper';
 export class UsersResolver {
   constructor(private readonly usersService: UsersService) {}
 
-  @Mutation(() => User)
-  createUser(@Args('createUserInput') createUserInput: CreateUserInput) {
+  @Mutation(() => User, { name: 'createUser' })
+  createUser(
+    @Args('userInput', { type: () => CreateUserInput })
+    createUserInput: CreateUserInput,
+  ) {
     return this.usersService.create(createUserInput);
   }
 

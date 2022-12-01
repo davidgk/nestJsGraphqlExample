@@ -1,0 +1,4 @@
+
+export HOME_GRAPH_EXAMPLE="./graphqlexample"
+alias startLocal="npm run start:debug:local"
+alias cleanLocal="rm -rf $HOME_GRAPH_EXAMPLE/dist; npm run build"
