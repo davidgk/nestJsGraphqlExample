@@ -1,0 +1,38 @@
+export const DB_PUBLIC_SCHEMA = { schema: 'public' };
+export const enum DB_TABLE_NAMES {
+  USERS = 'USERS',
+}
+
+export const STD_ERRORS = {
+  PARAM_NULL: 'the param sent should not be null.',
+};
+
+export enum TRUNCATE_TABLE {
+  USERS = 'TRUNCATE TABLE public."USERS" CASCADE',
+}
+
+export const DB_CONF_FIELDS = {
+  HOST: 'DB_HOST',
+  PORT: 'DB_PORT',
+  DATABASE: 'DB_DATABASE',
+  USERNAME: 'DB_USERNAME',
+  PASSWORD: 'DB_PASSWORD',
+  SYNCHRONIZE: 'DB_SYNCHRONIZE',
+  LOGGING: 'DB_LOGGING',
+  MIGRATIONS: 'DB_MIGRATIONS',
+  MIGRATIONS_TABLE: 'DB_MIGRATIONS_TABLE',
+  LOGGER: 'DB_LOGGER',
+  AUTOLOAD_ENTITIES: 'DB_AUTOLOAD_ENTITIES',
+  URL: 'DB_URL',
+};
+
+export const APP = {
+  ENV: 'NODE_ENV',
+  MAX_THUMBNAIL_FILESIZE: 'MAX_THUMBNAIL_FILESIZE',
+};
+
+export const JWT = {
+  CACHE: 'JWT_CACHE',
+  RATE_LIMIT: 'JWT_RATE_LIMIT',
+  REQUEST_PER_MINUTE: 'JWT_REQUEST_PER_MINUTE',
+};
