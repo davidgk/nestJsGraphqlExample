@@ -12,13 +12,11 @@ export class userCreate1662473790759 implements MigrationInterface {
                 "created_at" TIMESTAMP NOT NULL DEFAULT now(), 
                 "updated_at" TIMESTAMP NOT NULL DEFAULT now(), 
                 "deleted_at" TIMESTAMP,  
-                "surname" character(40) NOT NULL, 
-                "lastname" character(40) NOT NULL, 
+                "first_name" character varying(40)  NOT NULL, 
+                "last_name" character varying(40) NOT NULL, 
+                "username" character varying(40) NOT NULL, 
                 "email" character(40) NOT NULL, 
-                CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id"))`,
-    );
-    await queryRunner.query(
-      `CREATE UNIQUE INDEX "index_user_username" ON "USERS" ("username") `,
+                CONSTRAINT "PK_USERS" PRIMARY KEY ("id"))`,
     );
     await queryRunner.query(
       `CREATE UNIQUE INDEX "user_pkey" ON "USERS" ("id") `,
@@ -26,11 +24,10 @@ export class userCreate1662473790759 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`DROP INDEX IF EXISTS "public"."user_pkey"`);
     await queryRunner.query(
-      `DROP INDEX IF EXISTS "public"."index_user_username"`,
+      `DROP INDEX IF EXISTS "public"."user_pkey";
+             DROP TABLE IF EXISTS "public"."USERS";
+    `,
     );
-    // We cannot drop users at Story depends on it
-    // await queryRunner.query(`DROP TABLE IF EXISTS public."USERS"`);
   }
 }

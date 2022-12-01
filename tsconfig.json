@@ -14,7 +14,8 @@
       "@app/*": ["app/*"],
       "@config/*": ["config/*"],
       "@database/*": ["database/*"],
-      "@commons/*": ["commons/*"]
+      "@commons/*": ["commons/*"],
+      "@user/*": ["users/*"]
     },
     "incremental": true,
     "skipLibCheck": true,

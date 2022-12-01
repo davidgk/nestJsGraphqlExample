@@ -8,12 +8,14 @@ import { typeOrmAsyncConfig } from '@database/database-config.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriverConfig } from '@nestjs/apollo';
 import { graphqlParams } from '@config/graphql-params';
+import { UsersModule } from '@user/users.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(envConfigParam),
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     GraphQLModule.forRoot<ApolloDriverConfig>(graphqlParams),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
