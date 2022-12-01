@@ -11,7 +11,7 @@ export class userCreate1662473790759 implements MigrationInterface {
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
                 "created_at" TIMESTAMP NOT NULL DEFAULT now(), 
                 "updated_at" TIMESTAMP NOT NULL DEFAULT now(), 
-                "deleted_at" TIMESTAMP, "username" character(40) NOT NULL, 
+                "deleted_at" TIMESTAMP,  
                 "surname" character(40) NOT NULL, 
                 "lastname" character(40) NOT NULL, 
                 "email" character(40) NOT NULL, 
